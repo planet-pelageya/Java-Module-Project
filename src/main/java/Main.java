@@ -12,8 +12,8 @@ public class Main {
         ArrayList <Car> CarList= new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         for(int i = 0; i<3; i++){
-            int kostyl = i+1;
-            System.out.println("Введите название машины номер " + kostyl);
+            int count = i+1;
+            System.out.println("Введите название машины номер " + count);
             String name = scanner.nextLine();
             long speed;
             do{
