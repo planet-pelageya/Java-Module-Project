@@ -1,4 +1,4 @@
-// package org.example;
+
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -17,13 +17,19 @@ public class Main {
             String name = scanner.nextLine();
             long speed;
             do{
-                System.out.println("Введите скорость машины ");
-                speed = scanner.nextLong();
-                scanner.nextLine();
-                if (speed > 250) {
-                    System.out.println("Скорость не должна превышать 250. Сбавь габаритики, уважаемый");
+                System.out.println("Введите скорость машины");
+                if (scanner.hasNextLong()) {
+                    speed = scanner.nextLong();
+                    scanner.nextLine();
+                    if (speed > 250) {
+                        System.out.println("Скорость не должна превышать 250. Сбавь габаритики, уважаемый");
+                    }else {
+                        break;
+                    }
+                }else{System.out.println("Некорректный ввод. Введите число.");
+                    scanner.nextLine();
                 }
-            }while(speed>251);
+            }while(true);
             Car car = new Car(name,speed);
             CarList.add(car);
         }
