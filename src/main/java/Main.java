@@ -40,9 +40,6 @@ public class Main {
                 distance = dist;
                 winner = car.name;
             }
-
-
-
         }
         System.out.println("Самая быстрая машина:" + winner);
     }
